@@ -4,7 +4,8 @@
   "info": {
     "singularName": "imovel",
     "pluralName": "imoveis",
-    "displayName": "Imoveis"
+    "displayName": "Imoveis",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -57,6 +58,9 @@
     },
     "Vagas": {
       "type": "integer"
+    },
+    "Link": {
+      "type": "string"
     }
   }
 }

@@ -372,6 +372,7 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiImovelImovel extends Struct.CollectionTypeSchema {
   collectionName: 'imoveis';
   info: {
+    description: '';
     displayName: 'Imoveis';
     pluralName: 'imoveis';
     singularName: 'imovel';
@@ -392,6 +393,7 @@ export interface ApiImovelImovel extends Struct.CollectionTypeSchema {
     Estado: Schema.Attribute.String;
     Id_externo: Schema.Attribute.UID & Schema.Attribute.Required;
     IPTU: Schema.Attribute.Float;
+    Link: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
