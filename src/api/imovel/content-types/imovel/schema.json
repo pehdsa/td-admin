@@ -61,6 +61,9 @@
     },
     "Link": {
       "type": "string"
+    },
+    "Foto": {
+      "type": "string"
     }
   }
 }

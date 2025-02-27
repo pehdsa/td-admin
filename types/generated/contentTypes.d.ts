@@ -391,6 +391,7 @@ export interface ApiImovelImovel extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     Endereco: Schema.Attribute.String;
     Estado: Schema.Attribute.String;
+    Foto: Schema.Attribute.String;
     Id_externo: Schema.Attribute.UID & Schema.Attribute.Required;
     IPTU: Schema.Attribute.Float;
     Link: Schema.Attribute.String;
