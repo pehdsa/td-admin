@@ -67,6 +67,12 @@
     },
     "Valor_M2": {
       "type": "float"
+    },
+    "Modelo": {
+      "type": "string"
+    },
+    "Bairro": {
+      "type": "string"
     }
   }
 }

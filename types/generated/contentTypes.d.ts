@@ -383,6 +383,7 @@ export interface ApiImovelImovel extends Struct.CollectionTypeSchema {
   attributes: {
     Area_Total: Schema.Attribute.Float;
     Area_Util: Schema.Attribute.Float;
+    Bairro: Schema.Attribute.String;
     Banheiros: Schema.Attribute.Integer;
     Cidade: Schema.Attribute.String;
     Condominio: Schema.Attribute.Float;
@@ -401,6 +402,7 @@ export interface ApiImovelImovel extends Struct.CollectionTypeSchema {
       'api::imovel.imovel'
     > &
       Schema.Attribute.Private;
+    Modelo: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     Quartos: Schema.Attribute.Integer;
     Slug: Schema.Attribute.UID<'Titulo'>;
