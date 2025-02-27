@@ -381,8 +381,8 @@ export interface ApiImovelImovel extends Struct.CollectionTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
-    Area_Total: Schema.Attribute.String;
-    Area_Util: Schema.Attribute.String;
+    Area_Total: Schema.Attribute.Float;
+    Area_Util: Schema.Attribute.Float;
     Banheiros: Schema.Attribute.Integer;
     Cidade: Schema.Attribute.String;
     Condominio: Schema.Attribute.Float;
@@ -410,6 +410,7 @@ export interface ApiImovelImovel extends Struct.CollectionTypeSchema {
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     Vagas: Schema.Attribute.Integer;
+    Valor_M2: Schema.Attribute.Float;
     Valor_Total: Schema.Attribute.Float;
   };
 }

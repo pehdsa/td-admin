@@ -35,12 +35,6 @@
     "Endereco": {
       "type": "string"
     },
-    "Area_Total": {
-      "type": "string"
-    },
-    "Area_Util": {
-      "type": "string"
-    },
     "Condominio": {
       "type": "float"
     },
@@ -64,6 +58,15 @@
     },
     "Foto": {
       "type": "string"
+    },
+    "Area_Total": {
+      "type": "float"
+    },
+    "Area_Util": {
+      "type": "float"
+    },
+    "Valor_M2": {
+      "type": "float"
     }
   }
 }
