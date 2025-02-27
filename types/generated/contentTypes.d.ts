@@ -369,6 +369,48 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiImovelImovel extends Struct.CollectionTypeSchema {
+  collectionName: 'imoveis';
+  info: {
+    displayName: 'Imoveis';
+    pluralName: 'imoveis';
+    singularName: 'imovel';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    Area_Total: Schema.Attribute.String;
+    Area_Util: Schema.Attribute.String;
+    Banheiros: Schema.Attribute.Integer;
+    Cidade: Schema.Attribute.String;
+    Condominio: Schema.Attribute.Float;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Endereco: Schema.Attribute.String;
+    Estado: Schema.Attribute.String;
+    Id_externo: Schema.Attribute.UID & Schema.Attribute.Required;
+    IPTU: Schema.Attribute.Float;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::imovel.imovel'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Quartos: Schema.Attribute.Integer;
+    Slug: Schema.Attribute.UID<'Titulo'>;
+    Tipo: Schema.Attribute.String;
+    Titulo: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Vagas: Schema.Attribute.Integer;
+    Valor_Total: Schema.Attribute.Float;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -878,6 +920,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::imovel.imovel': ApiImovelImovel;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
